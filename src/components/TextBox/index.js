@@ -1,10 +1,10 @@
 import "./index.css";
 
-const TextBox = ({ label, placeholder }) => {
+const TextBox = ({ label, placeholder, required }) => {
   return (
     <div className="textField">
       <label>{label}</label>
-      <input placeholder={placeholder} />
+      <input required={required} placeholder={placeholder} />
     </div>
   );
 };

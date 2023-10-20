@@ -1,11 +1,11 @@
 import "./index.css";
 
-const DropDown = ({ label, items }) => {
+const DropDown = ({ label, items, required }) => {
 
   return (
     <div className="dropDownContainer">
       <label>{label}</label>
-      <select>
+      <select required={required}>
         {items.map(item => (
           <option key={item}>{item}</option>
         ))}
