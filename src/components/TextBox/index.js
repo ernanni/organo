@@ -1,10 +1,14 @@
 import "./index.css";
 
-const TextBox = ({ label, placeholder, required }) => {
+const TextBox = ({ value, onUpdate, label, placeholder, required }) => {
+  const onChange = (event) => {
+    onUpdate(event.target.value);
+  };
+
   return (
     <div className="textField">
       <label>{label}</label>
-      <input required={required} placeholder={placeholder} />
+      <input value={value} onChange={onChange} required={required} placeholder={placeholder} />
     </div>
   );
 };
