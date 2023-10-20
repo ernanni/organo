@@ -1,13 +1,13 @@
 import "./index.css";
 
 const DropDown = ({ label, items }) => {
-  console.log(items)
+
   return (
-    <div>
+    <div className="dropDownContainer">
       <label>{label}</label>
       <select>
         {items.map(item => (
-          <option>{item}</option>
+          <option key={item}>{item}</option>
         ))}
       </select>
     </div>

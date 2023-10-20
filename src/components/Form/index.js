@@ -21,7 +21,7 @@ const Form = () => {
         <TextBox label="Nome" placeholder="Digite seu nome" />
         <TextBox label="Cargo" placeholder="Digite seu cargo" />
         <TextBox label="Imagem" placeholder="Informe o endereço da imagem" />
-        <DropDown items={teams}/>
+        <DropDown label="Time" items={teams} />
       </form>
     </section>
   );
