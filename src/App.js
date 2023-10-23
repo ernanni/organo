@@ -17,7 +17,6 @@ function App() {
 
   const onFormSubmit = (value) => {
     setMembers([...members, value]);
-    console.log('onFormSubmit', members);
   };
 
   return (
