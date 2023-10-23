@@ -2,12 +2,12 @@ import "./index.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer>
       <img
         src="/images/fundo.png"
         alt="Rodapé"
       />
-    </div>
+    </footer>
   );
 };
 
