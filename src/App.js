@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Banner, Form, Team } from "./components";
+import { Banner, Form, Team, Footer } from "./components";
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
           members={members.filter(member => member.team === teamsItem.name)}
         />
       )}
+      <Footer />
     </div>
   );
 }
