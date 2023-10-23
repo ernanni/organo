@@ -10,11 +10,15 @@ const Form = ({ teams, onSubmitted }) => {
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
   const [image, setImage] = useState('');
-  const [team, setTeam] = useState('');
+  const [team, setTeam] = useState(teams[0]);
 
   const onSave = (event) => {
     event.preventDefault();
     onSubmitted({ name, role, image, team });
+    setName('');
+    setRole('');
+    setImage('');
+    setTeam(teams[0]);
   };
 
   return (

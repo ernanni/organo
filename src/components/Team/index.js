@@ -4,7 +4,7 @@ import './index.css';
 const Team = ({ name, primaryColor, secondaryColor, members }) => {
 
   return (
-    <section className="teamContainer" style={{ backgroundColor: secondaryColor }}>
+    members.length > 0 && <section className="teamContainer" style={{ backgroundColor: secondaryColor }}>
       <h3 style={{ borderColor: primaryColor }}>{name}</h3>
       <div className='members'>
         {members.map(item => <Card key={item.name} member={item} />)}
