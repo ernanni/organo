@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Banner, Form, Team, Footer } from "./components";
 
 function App() {

@@ -1,11 +1,11 @@
 import './index.css';
 
-const Card = ({ member }) => {
+const Card = ({ member, backgroundColor }) => {
   const { name, role, image } = member;
 
   return (
     <div className='colaborador'>
-      <div className='cabecalho'>
+      <div className='cabecalho' style={{ backgroundColor }}>
         <img src={image} alt={name} />
       </div>
       <div className='rodape'>
