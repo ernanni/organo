@@ -1,21 +1,11 @@
 import { useState } from "react";
 
-import "./index.css";
 import TextBox from "../TextBox";
 import DropDown from "../DropDown";
 import Button from "../Button";
+import "./index.css";
 
-const Form = () => {
-
-  const teams = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão'
-  ];
+const Form = ({ teams, onSubmitted }) => {
 
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
@@ -24,7 +14,7 @@ const Form = () => {
 
   const onSave = (event) => {
     event.preventDefault();
-    console.log('Form Submitted', name, role, image, team);
+    onSubmitted({ name, role, image, team });
   };
 
   return (
