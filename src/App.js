@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Banner, Form, Team } from "./components";
 
 function App() {
@@ -13,28 +13,24 @@ function App() {
     { name: 'Inovação e Gestão', primaryColor: '#FF8A29', secondaryColor: '#FFEEDF' },
   ];
 
-  const [team, setTeam] = useState([]);
-
-  useEffect(() => {
-    console.log(team);
-    setTeam(team);
-  }, [team]);
+  const [members, setMembers] = useState([]);
 
   const onFormSubmit = (value) => {
-    setTeam([...team, value]);
+    setMembers([...members, value]);
+    console.log('onFormSubmit', members);
   };
 
   return (
     <div className="App">
       <Banner />
       <Form teams={teams.map(item => item.name)} onSubmitted={value => onFormSubmit(value)} />
-      {teams.map(item =>
+      {teams.map(teamsItem =>
         <Team
-          key={item.name}
-          name={item.name}
-          primaryColor={item.primaryColor}
-          secondaryColor={item.secondaryColor}
-          team={team.filter(item => item.team === teams.name)}
+          key={teamsItem.name}
+          name={teamsItem.name}
+          primaryColor={teamsItem.primaryColor}
+          secondaryColor={teamsItem.secondaryColor}
+          members={members.filter(member => member.team === teamsItem.name)}
         />
       )}
     </div>

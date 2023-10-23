@@ -1,7 +1,8 @@
 import './index.css';
 
-const Card = ({ name, role, image }) => {
-  console.log('name, role, image');
+const Card = ({ member }) => {
+  const { name, role, image } = member;
+
   return (
     <div className='colaborador'>
       <div className='cabecalho'>
